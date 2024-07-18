@@ -2,7 +2,7 @@ package com.hspedu.homework.H13;
 
 /**
  * 定义多态数组，里面保存2个学生和2个教师。要求按年龄从高到低排序。
- * <p>
+ * 
  * 定义方法，形成多态数组，调用学生的study或教师的teach方法。
  */
 public class Homework13 {
