@@ -1,0 +1,13 @@
+new Demo().test();
+Demo的无参构造器
+    Demo() {
+        super();
+        System.out.println("Demo");
+    }
+    super无参构造器 则输出Test 然后输出Demo最后输出Rose和Jack
+
+
+
+new Demo("john").test();
+Demo的有参构造器
+输出 John Jack

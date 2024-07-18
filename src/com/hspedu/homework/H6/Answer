@@ -1,0 +1,19 @@
+1.
+super可以访问 name "AA"
+public void g1() {    }
+
+this可以访问id score还有f1(){   }
+name "AA"  public void g1() {    }
+
+
+2.super可以访问 name "AA"
+public void g1() {    }
+String id "001"
+public void f1() {     }
+
+this可以访问name BB
+void g1() {     }
+void show() {     }
+String id "001"
+public void f1() {     }
+

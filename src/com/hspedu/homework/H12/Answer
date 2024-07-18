@@ -1,0 +1,60 @@
+== 和 equals 是 Java 中用于比较对象的两种不同方法，它们有着不同的作用和使用场景。以下是它们的主要区别：
+
+== 操作符
+比较基础：
+
+== 用于比较两个变量的引用（内存地址），即判断它们是否指向同一个对象。
+使用场景：
+
+比较基本数据类型（如 int, char, boolean 等）时，== 比较的是它们的值。
+比较引用类型（如对象、数组等）时，== 比较的是它们在内存中的地址。
+int a = 10;
+int b = 10;
+System.out.println(a == b); // 输出 true，比较的是数值
+
+String s1 = new String("hello");
+String s2 = new String("hello");
+System.out.println(s1 == s2); // 输出 false，比较的是对象引用
+
+String s3 = s1;
+System.out.println(s1 == s3); // 输出 true，s1 和 s3 指向同一个对象
+
+
+
+
+equals 方法
+比较基础：
+
+equals 方法用于比较两个对象的内容是否相等。
+equals 是 Object 类中的一个方法，所有对象都继承了这个方法。默认实现是比较对象的引用（等价于 ==），但许多类（如 String、Integer 等）重写了 equals 方法以比较对象的内容。
+使用场景：
+
+当需要比较两个对象的内容是否相等时，使用 equals 方法。
+通常需要重写 equals 方法，以便按照特定的业务需求比较对象的内容。
+String s1 = new String("hello");
+String s2 = new String("hello");
+System.out.println(s1.equals(s2)); // 输出 true，String 类重写了 equals 方法，比较的是内容
+
+class Person {
+    String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Person person = (Person) obj;
+        return name.equals(person.name);
+    }
+}
+
+Person p1 = new Person("Alice");
+Person p2 = new Person("Alice");
+System.out.println(p1.equals(p2)); // 输出 true，比较的是内容而不是引用
