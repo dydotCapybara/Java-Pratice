@@ -1,3 +1,2 @@
 Recording My Leanrning Process
-第一次自己动手开发小系统，还存在很多不足，希望从这个房屋程序开始慢慢熟练Java
-让自己的研究生生活更加丰富精彩
+
